@@ -8,17 +8,17 @@ import java.util.stream.IntStream;
 
 public class Radkovskyi_PrimeNumbers extends JFrame {
 
-    // Константні "зерна" для перевірки.  Можна було б і згенерувати, але так наглядніше.
+    // Константні "зерна" для перевірки.
     private static final int[] CONST_SEEDS = {983, 991, 997, 1009, 1013};
-    // Стандартна ширина вікна.  Змінив би, якби дизайн був адаптивним, а так норм.
+    // Стандартна ширина вікна.
     private static final int DEFAULT_WIDTH = 700;
-    // Стандартна висота.  Аналогічно.
+    // Стандартна висота. 
     private static final int DEFAULT_HEIGHT = 600;
     // Шрифт для заголовків - жирний.  Dialog - щоб на різних платформах виглядало однаково.
     private static final Font DEFAULT_FONT_BOLD = new Font("Dialog", Font.BOLD, 14);
     // Звичайний шрифт.
     private static final Font DEFAULT_FONT_PLAIN = new Font("Dialog", Font.PLAIN, 14);
-    // Відступи для компонентів.  Щоб не прилипали один до одного.
+    // Відступи для компонентів. 
     private static final EmptyBorder DEFAULT_MARGIN = new EmptyBorder(5, 10, 5, 10);
 
     // Поля вводу для меж діапазону.  Зробив final, бо змінювати їх не треба.
@@ -34,7 +34,7 @@ public class Radkovskyi_PrimeNumbers extends JFrame {
     private final JLabel labelResult = new JLabel("Результати:");
 
 
-    // Конструктор класу.  Тут все ініціалізуємо і запускаємо.
+    // Конструктор класу. 
     public Radkovskyi_PrimeNumbers() {
         initializeComponents(); // Ініціалізація компонентів (поля, кнопки, і т.д.).
         setupLayout();        // Налаштування розміщення компонентів.
@@ -53,7 +53,7 @@ public class Radkovskyi_PrimeNumbers extends JFrame {
         // Встановлюємо шрифт.
         areaOutput.setFont(DEFAULT_FONT_PLAIN);
 
-        // Застосовуємо відступи і шрифти.  Трохи спростив цикл через IntStream.
+        // Застосовуємо відступи і шрифти.  Спростив цикл через IntStream.
         IntStream.of(0, 1, 2).forEach(i -> {
             JComponent[] components = {labelMin, labelMax, labelResult, fieldMin, fieldMax, buttonAction};
             components[i].setBorder(DEFAULT_MARGIN); // Відступи
