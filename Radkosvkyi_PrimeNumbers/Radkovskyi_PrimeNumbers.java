@@ -141,7 +141,7 @@ public class Radkovskyi_PrimeNumbers extends JFrame {
                 return;
             }
 
-            areaOutput.setText("Обчислення...\n"); // Очищаємо вивід і пишемо "Обчислення..."
+            areaOutput.setText("Обчислення...\n"); // Очищаємо вивід і пишем
             buttonAction.setEnabled(false);       // Блокуємо кнопку, поки йдуть розрахунки
 
             // Запускаємо обчислення в окремому потоці
@@ -178,7 +178,7 @@ public class Radkovskyi_PrimeNumbers extends JFrame {
             publish("\n---\nБлок факторизації чисел методом Ферма:\n"); // Роздільник у виводі
             factorizeNumbers(); // Факторизація
 
-            return null; // Треба щось повернути, але нам не треба результат
+            return null; 
         }
 
         public long calculatePrimeProduct() {
@@ -317,10 +317,9 @@ public class Radkovskyi_PrimeNumbers extends JFrame {
                 }
                 a++; // Збільшуємо a
                 b2 = a * a - n; // Перераховуємо b^2
-                if (b2 < 0) return new long[0]; // Теоретично не повинно бути
+                if (b2 < 0) return new long[0];
             }
             return new long[0]; // Якщо не знайшли методом Ферма
-            // Ферма не завжди знаходить множники, треба мати на увазі.
         }
 
 
